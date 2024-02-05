@@ -13,11 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
-
     private final DataProcessingService processingService;
-
     @Autowired
     public UserController(DataProcessingService processingService) {
         this.processingService = processingService;

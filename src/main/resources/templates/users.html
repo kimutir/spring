@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+    <h1><span th:text="${type}"></span> user list:</h1>
+    <h2 th:if="${users.isEmpty()}">empty list</h2>
+    <ul th:unless="${users.isEmpty()}">
+        <li th:each="user: ${users}" style="display: flex; gap: 4px">
+            <p th:text="${user.name()}">
+            <p th:text="${user.age()}">
+            <p th:text="${user.email()}">
+        </li>
+    </ul>
+</body>
+</html>
